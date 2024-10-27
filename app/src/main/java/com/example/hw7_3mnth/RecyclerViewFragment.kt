@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.hw7_3mnth.databinding.FragmentRecyclerViewBinding
 import com.google.android.material.carousel.CarouselLayoutManager
 
@@ -27,6 +28,12 @@ import com.google.android.material.carousel.CarouselLayoutManager
             super.onViewCreated(view, savedInstanceState)
             initAdapter()
             loadData()
+
+            binding.buttonToNewFragment.setOnClickListener {
+                val action = RecyclerViewFragmentDirections.actionRecyclerViewFragmentToNewFragment()
+                findNavController().navigate(action)
+            }
+
         }
 
         private fun loadData() {

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -37,8 +38,10 @@ android {
         jvmTarget = "1.8"
     }
 }
-
+   var nav_version = "2.8.1"
 dependencies {
+    implementation ("androidx.navigation:navigation-fragment:$nav_version")
+    implementation ( "androidx.navigation:navigation-ui:$nav_version")
     implementation ("com.google.android.material:material:<latest_version>")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     implementation(libs.androidx.core.ktx)

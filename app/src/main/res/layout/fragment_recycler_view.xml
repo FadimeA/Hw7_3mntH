@@ -12,4 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp" />
+
+    <Button
+        android:id="@+id/buttonToNewFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="16dp"
+        android:text="Перейти к категориям" />
 </FrameLayout>

@@ -4,6 +4,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.hw7_3mnth.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
@@ -13,9 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             val recyclerViewFragment = RecyclerViewFragment()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, recyclerViewFragment)
-                .commit()
+            supportFragmentManager.beginTransaction().replace(R.id.fragment_container, recyclerViewFragment).commit()
         }
+
+
     }
 }
